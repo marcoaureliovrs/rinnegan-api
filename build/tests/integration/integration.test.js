@@ -33,7 +33,6 @@ describe('Testes de Integração', () => {
             helpers_1.request(helpers_1.app)
                 .get('/api/alerts/all')
                 .end((error, res) => {
-                console.log(res);
                 helpers_1.expect(res.status).to.equal(HTTPStatus.OK);
                 helpers_1.expect(res.body.payload).to.be.an('array');
                 helpers_1.expect(res.body.payload[0].server).to.be.equal(alertDefault.server);

@@ -63,7 +63,7 @@ npm run unit-test
 
 Para rodar a automação do istanbul para avaliar a cobertura de testes por toda a aplicação basta executar o comando abaixo
 ```
-integration-coverage
+npm run integration-coverage
 ```
 
 
