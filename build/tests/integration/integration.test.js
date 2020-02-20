@@ -30,13 +30,14 @@ describe('Testes de Integração', () => {
     });
     describe('GET /api/alerts/all', () => {
         it('Deve retornar um Array com todos os Alertas', done => {
-            helpers_1.request('http://localhost:7000')
+            helpers_1.request(helpers_1.app)
                 .get('/api/alerts/all')
                 .end((error, res) => {
+                console.log(res);
                 helpers_1.expect(res.status).to.equal(HTTPStatus.OK);
                 helpers_1.expect(res.body.payload).to.be.an('array');
-                //expect(res.body.payload[0].server).to.be.equal(alertDefault.server);
-                //expect(res.body.payload[0].description).to.be.equal(alertDefault.description);
+                helpers_1.expect(res.body.payload[0].server).to.be.equal(alertDefault.server);
+                helpers_1.expect(res.body.payload[0].description).to.be.equal(alertDefault.description);
                 done(error);
             });
         });
