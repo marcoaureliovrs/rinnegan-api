@@ -10,7 +10,6 @@ Sistema básico de registro de monitoração.
 * [Sequelize](http://docs.sequelizejs.com/en/latest/) - ORM compatível com bancos de dados SQLServer, Postgres, MySQL e SQLite
 * [Mocha](https://mochajs.org/) - Test Runner para Node.js
 * [Chai](http://chaijs.com/) - Interface BDD e TDD para implementação de testescomentários no código
-* [Babel](https://babeljs.io/) - Transpiler EcmaScript 6
 
 
 ## Pré Requisitos
