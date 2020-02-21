@@ -50,13 +50,7 @@ class Alert implements IAlert {
     return model.Alert.count({
      attributes:['server', [Sequelize.fn('count', Sequelize.col('server')), 'count']],
      group:['Alert.server'],
-     limit: 3,
-     
-     // order:['server'],
-      
-      //group:'server'
-      //[sequelize.fn('COUNT', sequelize.col('server')), 'amount_alerts']
-      
+     limit: 3, 
     }).then(topAlerts => {
       console.log(topAlerts)
       return topAlerts;
