@@ -1,6 +1,6 @@
 import { IAlert, IAlertDetail, createAlert, createAlerts, createAlertById } from './interface';
 import * as Bluebird from 'bluebird';
-import sequelize from 'sequelize';
+import {Sequelize} from 'sequelize';
 const model = require('../../models');
 
 
@@ -48,7 +48,7 @@ class Alert implements IAlert {
 
   getTopAlerts() {
     return model.Alert.count({
-     attributes:['server', [sequelize.fn('count', sequelize.col('server')), 'count']],
+     attributes:['server', [Sequelize.fn('count', Sequelize.col('server')), 'count']],
      group:['Alert.server'],
      limit: 3,
      
